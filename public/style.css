@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('https://cdn.glitch.global/61a1243c-4428-4472-a3ea-77db49762891/ComicNeue-Regular.woff?v=1740960698095') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('https://cdn.glitch.global/61a1243c-4428-4472-a3ea-77db49762891/ComicNeue-Bold.woff?v=1740960955975') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('https://cdn.glitch.global/61a1243c-4428-4472-a3ea-77db49762891/ComicNeue-Italic.woff?v=1740960958811') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'ComicNeue';
+  src: url('https://cdn.glitch.global/61a1243c-4428-4472-a3ea-77db49762891/ComicNeue-BoldItalic.woff?v=1740960961084') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+@media (max-width: 600px) {
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+body {
+  font-family: 'ComicNeue', sans-serif;
+  margin: 0;
+  padding: 0 10px;
+  color: #e0f4ff;
+  background: 
+    linear-gradient(rgba(20, 30, 60, 0.95), rgba(20, 30, 60, 0.95)),
+    url('https://cdn.glitch.global/acf248c9-0029-4d01-904f-422fe05defb0/IMG_2493.JPG?v=1744841458486');
+  background-repeat: repeat;
+  background-size: 40%;
+  background-position: center;
+  min-height: 100vh;
+}
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #f0f9ff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+.section {
+  margin-bottom: 30px;
+}
+h1, h2, h3 {
+  margin-top: 0;
+  color: #2e4f6f;
+  font-weight: 700;
+}
+h2 {
+  text-decoration: underline;
+}
+input[type="text"],
+input[type="number"],
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 4px;
+  border: 1px solid #6b8cbf;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize:vertical;
+}
+
+p {
+  color: #2e4f6f;
+}
+
+label {
+  font-weight: 700;
+  display: block;
+  margin-top: 10px;
+  color: #4f78a8;
+}
+button {
+  background-color: #5a8cc9;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-family: 'ComicNeue', sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #7aa9e0;
+}
+a {
+  color: #5a8cc9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+.chameleon {
+  color: #0099ff;
+  font-weight: bold;
+}
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  color: #2e4f6f;
+}
+.instructions {
+  background-color: #e6f2ff;
+  border: 2px solid #7a9ed8;
+  padding: 15px;
+  margin-top: 20px;
+  max-width: 700px;
+}
+.instructions h3 {
+  color: #4f78a8;
+}
+.instructions ol {
+  padding-left: 20px;
+  list-style-position: inside;
+  color: #2e4f6f;
+}
+.instructions li {
+  margin-bottom: 10px;
+  line-height: 1.4;
+  color: #2e4f6f;
+}
+
+.kick {
+  width: 50px;
+}

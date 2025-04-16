@@ -1,0 +1,124 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Chameleon Questions</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div id="home" class="container">
+    <h1>Chameleon Questions</h1>
+    <div class="section">
+      <h2>Create a New Game (Host)</h2>
+      <label for="hostName">Your Display Name:</label>
+      <input type ="text" id="createName" placeholder="Host name" required/>
+    <button id="create">Create Game</button>
+    </div>
+    <h2>Join an Existing Game</h2>
+    <label for="code">Game Code:</label>
+    <input type="text" id="joinId" name="name"  placeholder="Game ID" />
+    <label for="name">Display Name:</label>
+    <input type="text" id="joinName" name="code" placeholder="Your name" />
+    <button id="join">Join Game</button>
+    
+    <!-- How to Play Instructions Box -->
+    <div class="instructions">
+      <h3>How to Play</h3>
+      <ol>
+        <li><strong>Create or Join:</strong> The host creates a game and shares the code. Players join by entering the game code and choosing a display name.</li>
+        <li><strong>Setup the Round:</strong> A random secret question is chosen from a dataset. The question will be shown to every player except the chameleon, who gets a different question.</li>
+        <li><strong>Role Assignment:</strong> The game will randomly assign a certain number of chameleons.</li>
+        <li><strong>Gameplay:</strong> Each player submits their answer to the question. The chameleon, not knowing they have a different question, also submits a different question.</li>
+        <li><strong>Discussion & Voting:</strong> After everyone submits an answer, everyone reads their answer outloud. Then, the real question is revealed and players discuss and vote on who they think the chameleon/s is.</li>
+        <li><strong>New Round or End Game:</strong> You can start a new round with the same players or end the game.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div id="lobby" class="container" style="display:none;">
+    <h1>Game Code: <span id="gameId"></span></h1>
+    <h2>Players Joined:</h2>
+    <ul id="players"></ul>
+    <h3>Start a New Round</h3>
+    <button id="startRound">Start Round</button>
+    
+    <div class="instructions">
+      <h3>How to Play</h3>
+      <ol>
+        <li><strong>Create or Join:</strong> The host creates a game and shares the code. Players join by entering the game code and choosing a display name.</li>
+        <li><strong>Setup the Round:</strong> A random secret question is chosen from a dataset. The question will be shown to every player except the chameleon, who gets a different question.</li>
+        <li><strong>Role Assignment:</strong> The game will randomly assign a certain number of chameleons.</li>
+        <li><strong>Gameplay:</strong> Each player submits their answer to the question. The chameleon, not knowing they have a different question, also submits a different question.</li>
+        <li><strong>Discussion [&] Voting:</strong> After everyone submits an answer, everyone reads their answer outloud. Then, the real question is revealed and players discuss and vote on who they think the chameleon/s is.</li>
+        <li><strong>New Round or End Game:</strong> You can start a new round with the same players or end the game.</li>
+      </ol>
+    </div>
+      <button id="endGameBtn" style="display:none;">
+    End Game
+  </button>
+  </div>
+
+  <div id="answer" class="container" style="display:none;">
+    <h3 id="prompt"></h3>
+    <textarea id="answerBox"></textarea><br>
+    <button id="submitAnswer">Submit Answer</button>
+    <button id="endRoundBtn" style="display:none;">End Round</button>
+    
+    <div class="instructions">
+      <h3>How to Play</h3>
+      <ol>
+        <li><strong>Create or Join:</strong> The host creates a game and shares the code. Players join by entering the game code and choosing a display name.</li>
+        <li><strong>Setup the Round:</strong> A random secret question is chosen from a dataset. The question will be shown to every player except the chameleon, who gets a different question.</li>
+        <li><strong>Role Assignment:</strong> The game will randomly assign a certain number of chameleons.</li>
+        <li><strong>Gameplay:</strong> Each player submits their answer to the question. The chameleon, not knowing they have a different question, also submits a different question.</li>
+        <li><strong>Discussion [&] Voting:</strong> After everyone submits an answer, everyone reads their answer outloud. Then, the real question is revealed and players discuss and vote on who they think the chameleon/s is.</li>
+        <li><strong>New Round or End Game:</strong> You can start a new round with the same players or end the game.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div id="status" style="display:none;" class="container">
+    <h3>Waiting for answers...</h3>
+    <ul id="statusList"></ul>
+    <button id="endRoundBtnStatus" style="display:none;">End Round</button>
+    
+    <div class="instructions">
+      <h3>How to Play</h3>
+      <ol>
+        <li><strong>Create or Join:</strong> The host creates a game and shares the code. Players join by entering the game code and choosing a display name.</li>
+        <li><strong>Setup the Round:</strong> A random secret question is chosen from a dataset. The question will be shown to every player except the chameleon, who gets a different question.</li>
+        <li><strong>Role Assignment:</strong> The game will randomly assign a certain number of chameleons.</li>
+        <li><strong>Gameplay:</strong> Each player submits their answer to the question. The chameleon, not knowing they have a different question, also submits a different question.</li>
+        <li><strong>Discussion & Voting:</strong> After everyone submits an answer, everyone reads their answer outloud. Then, the real question is revealed and players discuss and vote on who they think the chameleon/s is.</li>
+        <li><strong>New Round or End Game:</strong> You can start a new round with the same players or end the game.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div id="submitted" style="display:none;" class="container">
+    <h3>Everyone has submitted!</h3>
+    <p id="yourAnswer"></p>
+    <p id="fakeQ"></p>
+    <p id="realQuestion" style="font-weight:bold;"></p>
+    <button id="revealBtn" style="display:none;">Reveal Real Question</button>
+    <button id="endRoundBtnSubmitted" style="display:none;">End Round</button>
+    
+    <div class="instructions">
+      <h3>How to Play</h3>
+      <ol>
+        <li><strong>Create or Join:</strong> The host creates a game and shares the code. Players join by entering the game code and choosing a display name.</li>
+        <li><strong>Setup the Round:</strong> A random secret question is chosen from a dataset. The question will be shown to every player except the chameleon, who gets a different question.</li>
+        <li><strong>Role Assignment:</strong> The game will randomly assign a certain number of chameleons.</li>
+        <li><strong>Gameplay:</strong> Each player submits their answer to the question. The chameleon, not knowing they have a different question, also submits a different question.</li>
+        <li><strong>Discussion [&] Voting:</strong> After everyone submits an answer, everyone reads their answer outloud. Then, the real question is revealed and players discuss and vote on who they think the chameleon/s is.</li>
+        <li><strong>New Round or End Game:</strong> You can start a new round with the same players or end the game.</li>
+      </ol>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
